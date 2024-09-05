@@ -1,0 +1,48 @@
+package travelTimeConverter;
+
+import java.util.Scanner;
+
+public class TravelTimeConverter {
+
+	public static void main(String[] args) {
+		
+		// Output the application's welcome
+		System.out.println("Welcome to the Travel Time Calculator");
+		System.out.println();
+		
+		// Prompt user for miles
+		System.out.print("Enter miles: ");
+		Scanner input = new Scanner(System.in);
+		float miles = input.nextInt();
+		
+		System.out.print("Enter miles per hour: ");
+		float milesPerHour = input.nextInt();
+		
+		// Convert distance to time in hours
+		float travelHours = miles / 60;
+		
+		// Convert distance to time in minutes
+		
+		float travelMinutes = ((miles / milesPerHour) - travelHours) * 60;
+		
+		
+		// Display estimated travel time
+		System.out.println();
+		System.out.println("Estimated travel time");
+		System.out.println("---------------------");
+		System.out.println("Hours: " + Math.round(travelHours));
+		System.out.println("Minutes: " + Math.round(travelMinutes));
+		System.out.println();
+		
+		
+		
+		// Output the application's closing
+		System.out.println("Bye!");
+
+				
+		// Close Scanner object
+		input.close();
+
+	}
+
+}
